@@ -3,11 +3,11 @@
 # tap-shortcut
 
 <div>
-  <a href="https://results.pre-commit.ci/latest/github/edgarrmondragon/tap-shortcut/main">
-    <img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/edgarrmondragon/tap-shortcut/main.svg"/>
+  <a href="https://results.pre-commit.ci/latest/github/reservoir-data/tap-shortcut/main">
+    <img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/reservoir-data/tap-shortcut/main.svg"/>
   </a>
-  <a href="https://github.com/edgarrmondragon/tap-shortcut/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/edgarrmondragon/tap-shortcut"/>
+  <a href="https://github.com/reservoir-data/tap-shortcut/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/reservoir-data/tap-shortcut"/>
   </a>
 </div>
 

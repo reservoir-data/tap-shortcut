@@ -40,9 +40,9 @@ dependencies = [
   "toolz==1",
   "typing-extensions>=4.14; python_full_version<'3.12'",
 ]
-urls.Documentation = "https://github.com/edgarrmondragon/tap-shortcut#readme"
-urls.Homepage = "https://github.com/edgarrmondragon/tap-shortcut"
-urls.Repository = "https://github.com/edgarrmondragon/tap-shortcut"
+urls.Documentation = "https://github.com/reservoir-data/tap-shortcut#readme"
+urls.Homepage = "https://github.com/reservoir-data/tap-shortcut"
+urls.Repository = "https://github.com/reservoir-data/tap-shortcut"
 scripts.tap-shortcut = "tap_shortcut.tap:TapShortcut.cli"
 
 [dependency-groups]
