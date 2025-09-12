@@ -10796,6 +10796,13 @@
           },
           "uniqueItems": true
         },
+        "sub_tasks": {
+          "description": "An array of story IDs to attach to this story as sub-tasks. This list represents the final state of the parent's sub-tasks - missing stories will be unlinked, new stories will be linked, and the input order reflects sub-task positions.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LinkSubTaskParams"
+          }
+        },
         "requested_by_id": {
           "description": "The ID of the member that requested the story.",
           "type": "string",
