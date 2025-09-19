@@ -418,11 +418,11 @@
         "title": {
           "maxLength": 256,
           "minLength": 1,
-          "description": "The title for the new document",
+          "description": "The title for the new document.",
           "type": "string"
         },
         "content": {
-          "description": "The content for the new document",
+          "description": "The content for the new document, assumed to be HTML or plain text. No other formats are supported at this time.",
           "type": "string"
         }
       },
