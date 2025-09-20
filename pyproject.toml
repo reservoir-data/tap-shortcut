@@ -22,10 +22,9 @@ maintainers = [
 authors = [
   { name = "Edgar Ramírez-Mondragón", email = "edgarrm358@gmail.com" },
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
@@ -37,12 +36,13 @@ dynamic = [
 ]
 dependencies = [
   "requests",
-  "singer-sdk~=0.47.0",
+  "singer-sdk~=0.48.0",
   "toolz==1",
+  "typing-extensions>=4.14; python_full_version<'3.12'",
 ]
-urls.Documentation = "https://github.com/edgarrmondragon/tap-shortcut#readme"
-urls.Homepage = "https://github.com/edgarrmondragon/tap-shortcut"
-urls.Repository = "https://github.com/edgarrmondragon/tap-shortcut"
+urls.Documentation = "https://github.com/reservoir-data/tap-shortcut#readme"
+urls.Homepage = "https://github.com/reservoir-data/tap-shortcut"
+urls.Repository = "https://github.com/reservoir-data/tap-shortcut"
 scripts.tap-shortcut = "tap_shortcut.tap:TapShortcut.cli"
 
 [dependency-groups]
@@ -57,6 +57,7 @@ testing = [
 ]
 typing = [
   "mypy",
+  "ty>=0.0.1a16",
   "types-requests",
 ]
 
@@ -100,6 +101,7 @@ lint.pydocstyle.convention = "google"
 
 [tool.deptry.package_module_name_map]
 mypy = "mypy"
+ty = "ty"
 types-requests = "requests"
 
 [tool.pyproject-fmt]
@@ -122,7 +124,6 @@ env_list = [
   "3.12",
   "3.11",
   "3.10",
-  "3.9",
 ]
 
 [tool.tox.env_run_base]
@@ -140,7 +141,10 @@ commands = [ [ "tap-shortcut", { replace = "posargs", default = [ "--config=ENV"
 
 [tool.tox.env.typing]
 dependency_groups = [ "testing", "typing" ]
-commands = [ [ "mypy", "--strict", { replace = "posargs", default = [ "tap_shortcut", "tests" ], extend = true } ] ]
+commands = [
+  [ "mypy", "--strict", { replace = "posargs", default = [ "tap_shortcut", "tests" ], extend = true } ],
+  [ "ty", "check", { replace = "posargs", default = [ "tap_shortcut", "tests" ], extend = true } ],
+]
 
 [tool.mypy]
 warn_redundant_casts = true
