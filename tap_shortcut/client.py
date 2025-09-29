@@ -118,11 +118,9 @@ class ShortcutStream(RESTStream[None]):
     @override
     def authenticator(self) -> APIKeyAuthenticator:
         """Request authenticator."""
-        token: str = self.config["token"]
-        return APIKeyAuthenticator.create_for_stream(
-            self,
+        return APIKeyAuthenticator(
             key="Shortcut-Token",
-            value=token,
+            value=self.config["token"],
             location="header",
         )
 
