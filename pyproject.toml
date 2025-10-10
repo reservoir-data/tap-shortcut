@@ -157,9 +157,7 @@ warn_unused_ignores = true
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
 module = [
-  "backoff.*",
-  "toolz.*",
-  "singer.*",
+  "toolz.*", # https://github.com/pytoolz/toolz/issues/496
 ]
 
 [tool.uv]
