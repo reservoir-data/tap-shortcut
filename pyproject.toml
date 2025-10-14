@@ -64,6 +64,10 @@ typing = [
 [tool.hatch.version]
 source = "vcs"
 
+[tool.uv]
+preview = true
+required-version = ">=0.5.19"
+
 [tool.ruff]
 line-length = 88
 src = [
@@ -159,7 +163,3 @@ ignore_missing_imports = true
 module = [
   "toolz.*", # https://github.com/pytoolz/toolz/issues/496
 ]
-
-[tool.uv]
-preview = true
-required-version = ">=0.5.19"
