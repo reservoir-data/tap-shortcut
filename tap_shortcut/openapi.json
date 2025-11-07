@@ -12965,6 +12965,15 @@
     },
     "/api/v3/groups": {
       "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "archived",
+            "description": "Filter groups by their archived state. If true, returns only archived groups. If false, returns only unarchived groups. If not provided, returns all groups",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
         "responses": {
           "200": {
             "schema": {
