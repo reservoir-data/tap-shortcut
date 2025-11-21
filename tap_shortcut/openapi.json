@@ -413,6 +413,7 @@
       ]
     },
     "CreateDoc": {
+      "x-doc-skip": true,
       "type": "object",
       "properties": {
         "title": {
@@ -422,8 +423,16 @@
           "type": "string"
         },
         "content": {
-          "description": "The content for the new document, assumed to be HTML or plain text. No other formats are supported at this time.",
+          "description": "The content for the new document.",
           "type": "string"
+        },
+        "content_format": {
+          "description": "Format of the content being sent. Defaults to 'html'. If 'markdown', content will be converted to HTML for storage. Storage is always HTML; this parameter just tells us what format you're sending.",
+          "type": "string",
+          "enum": [
+            "markdown",
+            "html"
+          ]
         }
       },
       "additionalProperties": false,
@@ -2277,7 +2286,62 @@
         "message"
       ]
     },
+    "Doc": {
+      "x-doc-skip": true,
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "The public id of the Doc",
+          "type": "string",
+          "format": "uuid"
+        },
+        "title": {
+          "description": "The Doc's title",
+          "type": "string",
+          "x-nullable": true
+        },
+        "content_markdown": {
+          "description": "The Doc's content in Markdown format (converted from HTML storage).",
+          "type": "string",
+          "x-nullable": true
+        },
+        "content_html": {
+          "description": "The Doc's content in HTML format (as stored in S3). Only included when include_html=true query parameter is provided.",
+          "type": "string",
+          "x-nullable": true
+        },
+        "app_url": {
+          "description": "The Shortcut application url for the Doc",
+          "type": "string"
+        },
+        "created_at": {
+          "description": "The time/date the Doc was created",
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "description": "The time/date the Doc was last updated",
+          "type": "string",
+          "format": "date-time"
+        },
+        "archived": {
+          "description": "Whether the Doc is archived",
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "content_markdown",
+        "app_url",
+        "created_at",
+        "updated_at",
+        "archived"
+      ]
+    },
     "DocSlim": {
+      "x-doc-skip": true,
       "type": "object",
       "properties": {
         "id": {
@@ -3511,6 +3575,21 @@
         "default_epic_state_id",
         "epic_states"
       ]
+    },
+    "GetDoc": {
+      "x-doc-skip": true,
+      "type": "object",
+      "properties": {
+        "content_format": {
+          "description": "Format of the content to return. Defaults to 'markdown'. If 'html', includes HTML content in response.",
+          "type": "string",
+          "enum": [
+            "markdown",
+            "html"
+          ]
+        }
+      },
+      "additionalProperties": false
     },
     "Group": {
       "description": "A Group.",
@@ -9764,6 +9843,18 @@
         "created_at"
       ]
     },
+    "UnprocessableError": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "message"
+      ]
+    },
     "UnusableEntitlementError": {
       "type": "object",
       "properties": {
@@ -9897,6 +9988,31 @@
         "enabled": {
           "description": "Whether this EnumValue is enabled for its CustomField or not. Leaving this key out of the request leaves the current enabled state untouched.",
           "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateDoc": {
+      "x-doc-skip": true,
+      "type": "object",
+      "properties": {
+        "title": {
+          "maxLength": 256,
+          "minLength": 1,
+          "description": "The new title for the document",
+          "type": "string"
+        },
+        "content": {
+          "description": "The new content for the document.",
+          "type": "string"
+        },
+        "content_format": {
+          "description": "Format of content. For input: specifies format of provided content (defaults to 'html'). For output: controls response format - 'markdown' (default) or 'html' to include HTML content.",
+          "type": "string",
+          "enum": [
+            "markdown",
+            "html"
+          ]
         }
       },
       "additionalProperties": false
@@ -11831,8 +11947,159 @@
           }
         },
         "operationId": "createDoc",
-        "description": "Creates a new Doc.",
+        "description": "Creates a new Doc. Supports markdown or HTML input via content_format parameter.",
         "summary": "Create Doc"
+      }
+    },
+    "/api/v3/documents/{doc-public-id}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "doc-public-id",
+            "description": "The Doc's public ID",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "query",
+            "name": "content_format",
+            "description": "Format of the content to return. Defaults to 'markdown'. If 'html', includes HTML content in response.",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "markdown",
+              "html"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Doc"
+            },
+            "description": "Resource"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "403": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DisabledFeatureError"
+            }
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "**Either:** (1) Unprocessable **or** (2)  ",
+            "schema": {
+              "$ref": "#/definitions/UnprocessableError"
+            }
+          }
+        },
+        "operationId": "getDoc",
+        "description": "Get a Doc by its public ID with content. Use content_format=html query parameter to include HTML content.",
+        "summary": "Get Doc"
+      },
+      "put": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "doc-public-id",
+            "description": "The Doc's public ID",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "body",
+            "name": "UpdateDoc",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateDoc"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Doc"
+            },
+            "description": "Resource"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "403": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DisabledFeatureError"
+            }
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "**Either:** (1) Unprocessable **or** (2)  ",
+            "schema": {
+              "$ref": "#/definitions/UnprocessableError"
+            }
+          }
+        },
+        "operationId": "updateDoc",
+        "description": "Updates an existing Doc's title and/or content. Supports markdown or HTML input via content_format parameter. Rejects updates if document has an active CKEditor session.",
+        "summary": "Update Doc"
+      },
+      "delete": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "doc-public-id",
+            "description": "The Doc's public ID",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "body",
+            "name": "GetDoc",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetDoc"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "403": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DisabledFeatureError"
+            }
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "**Either:** (1) Unprocessable **or** (2)  ",
+            "schema": {
+              "$ref": "#/definitions/UnprocessableError"
+            }
+          }
+        },
+        "operationId": "deleteDoc",
+        "description": "Permanently deletes a Doc and its associated data. Requires admin access to the doc. Rejects deletion if document has an active CKEditor session.",
+        "summary": "Delete Doc"
       }
     },
     "/api/v3/entity-templates": {
