@@ -1,0 +1,458 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "app_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "description"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "archived"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "started"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "completed_at_override"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "started_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "completed_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "global_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "completed"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "started_at_override"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "categories"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "key_result_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "position"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "average_cycle_time"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "average_lead_time"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_related_documents"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "description": "(Deprecated) A Milestone is a collection of Epics that represent a release or some other large initiative that you are working on. Milestones have become Objectives, so you should use Objective-related API resources instead of Milestone ones.",
+    "properties": {
+      "app_url": {
+        "description": "The Shortcut application url for the Milestone.",
+        "type": "string"
+      },
+      "archived": {
+        "description": "A boolean indicating whether the Milestone has been archived or not.",
+        "type": "boolean"
+      },
+      "categories": {
+        "description": "An array of Categories attached to the Milestone.",
+        "items": {
+          "additionalProperties": false,
+          "description": "A Category can be used to associate Objectives.",
+          "properties": {
+            "archived": {
+              "description": "A true/false boolean indicating if the Category has been archived.",
+              "type": "boolean"
+            },
+            "color": {
+              "description": "The hex color to be displayed with the Category (for example, \"#ff0000\").",
+              "format": "css-color",
+              "minLength": 1,
+              "pattern": "^#[a-fA-F0-9]{6}$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "created_at": {
+              "description": "The time/date that the Category was created.",
+              "format": "date-time",
+              "type": "string"
+            },
+            "entity_type": {
+              "description": "A string description of this resource.",
+              "type": "string"
+            },
+            "external_id": {
+              "description": "This field can be set to another unique ID. In the case that the Category has been imported from another tool, the ID in the other tool can be indicated here.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "global_id": {
+              "description": "The Global ID of the Category.",
+              "type": "string"
+            },
+            "id": {
+              "description": "The unique ID of the Category.",
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "description": "The name of the Category.",
+              "type": "string"
+            },
+            "type": {
+              "description": "The type of entity this Category is associated with; currently Milestone or Objective is the only type of Category.",
+              "type": "string"
+            },
+            "updated_at": {
+              "description": "The time/date that the Category was updated.",
+              "format": "date-time",
+              "type": "string"
+            }
+          },
+          "required": [
+            "archived",
+            "entity_type",
+            "color",
+            "name",
+            "global_id",
+            "type",
+            "updated_at",
+            "external_id",
+            "id",
+            "created_at"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "completed": {
+        "description": "A true/false boolean indicating if the Milestone has been completed.",
+        "type": "boolean"
+      },
+      "completed_at": {
+        "description": "The time/date the Milestone was completed.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "completed_at_override": {
+        "description": "A manual override for the time/date the Milestone was completed.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "The time/date the Milestone was created.",
+        "format": "date-time",
+        "type": "string"
+      },
+      "description": {
+        "description": "The Milestone's description.",
+        "type": "string"
+      },
+      "entity_type": {
+        "description": "A string description of this resource.",
+        "type": "string"
+      },
+      "global_id": {
+        "type": "string"
+      },
+      "id": {
+        "description": "The unique ID of the Milestone.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "key_result_ids": {
+        "description": "The IDs of the Key Results associated with the Objective.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "name": {
+        "description": "The name of the Milestone.",
+        "type": "string"
+      },
+      "position": {
+        "description": "A number representing the position of the Milestone in relation to every other Milestone within the Workspace.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "started": {
+        "description": "A true/false boolean indicating if the Milestone has been started.",
+        "type": "boolean"
+      },
+      "started_at": {
+        "description": "The time/date the Milestone was started.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "started_at_override": {
+        "description": "A manual override for the time/date the Milestone was started.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "state": {
+        "description": "The workflow state that the Milestone is in.",
+        "type": "string"
+      },
+      "stats": {
+        "additionalProperties": false,
+        "description": "A group of calculated values for this Milestone.",
+        "properties": {
+          "average_cycle_time": {
+            "description": "The average cycle time (in seconds) of completed stories in this Milestone.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "average_lead_time": {
+            "description": "The average lead time (in seconds) of completed stories in this Milestone.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_related_documents": {
+            "description": "The number of related documents to this Milestone.",
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "num_related_documents"
+        ],
+        "type": "object"
+      },
+      "updated_at": {
+        "description": "The time/date the Milestone was updated.",
+        "format": "date-time",
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_url",
+      "description",
+      "archived",
+      "started",
+      "entity_type",
+      "completed_at_override",
+      "started_at",
+      "completed_at",
+      "name",
+      "global_id",
+      "completed",
+      "state",
+      "started_at_override",
+      "updated_at",
+      "categories",
+      "id",
+      "key_result_ids",
+      "position",
+      "stats",
+      "created_at"
+    ],
+    "type": "object"
+  },
+  "stream": "milestones",
+  "tap_stream_id": "milestones"
+}

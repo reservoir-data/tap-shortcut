@@ -1,0 +1,765 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "app_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "labels"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "member_mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "associated_groups"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "global_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "label_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "group_mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "end_date"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "follower_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "group_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "start_date"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "status"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points_done"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_related_documents"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "average_cycle_time"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_unstarted"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points_started"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points_unstarted"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_started"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_unestimated"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_backlog"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "average_lead_time"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points_backlog"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_done"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "description": "IterationSlim represents the same resource as an Iteration, but is more light-weight. Use the [Get Iteration](#Get-Iteration) endpoint to fetch the unabridged payload for an Iteration. ",
+    "properties": {
+      "app_url": {
+        "description": "The Shortcut application url for the Iteration.",
+        "type": "string"
+      },
+      "associated_groups": {
+        "description": "An array containing Group IDs and Group-owned story counts for the Iteration's associated groups.",
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "associated_stories_count": {
+              "description": "The number of stories this Group owns in the Iteration.",
+              "format": "int64",
+              "type": "integer"
+            },
+            "group_id": {
+              "description": "The Group ID of the associated group.",
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          "required": [
+            "group_id"
+          ],
+          "type": "object"
+        },
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "The instant when this iteration was created.",
+        "format": "date-time",
+        "type": "string"
+      },
+      "end_date": {
+        "description": "The date this iteration ends.",
+        "format": "date-time",
+        "type": "string"
+      },
+      "entity_type": {
+        "description": "A string description of this resource",
+        "type": "string"
+      },
+      "follower_ids": {
+        "description": "An array of UUIDs for any Members listed as Followers.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "global_id": {
+        "type": "string"
+      },
+      "group_ids": {
+        "description": "An array of UUIDs for any Groups you want to add as Followers. Currently, only one Group association is presented in our web UI.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "group_mention_ids": {
+        "description": "An array of Group IDs that have been mentioned in the Story description.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "id": {
+        "description": "The ID of the iteration.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "label_ids": {
+        "description": "An array of label ids attached to the iteration.",
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "labels": {
+        "description": "An array of labels attached to the iteration.",
+        "items": {
+          "additionalProperties": false,
+          "description": "A Label can be used to associate and filter Stories and Epics, and also create new Workspaces.",
+          "properties": {
+            "app_url": {
+              "description": "The Shortcut application url for the Label.",
+              "type": "string"
+            },
+            "archived": {
+              "description": "A true/false boolean indicating if the Label has been archived.",
+              "type": "boolean"
+            },
+            "color": {
+              "description": "The hex color to be displayed with the Label (for example, \"#ff0000\").",
+              "format": "css-color",
+              "minLength": 1,
+              "pattern": "^#[a-fA-F0-9]{6}$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "created_at": {
+              "description": "The time/date that the Label was created.",
+              "format": "date-time",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "description": {
+              "description": "The description of the Label.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "entity_type": {
+              "description": "A string description of this resource.",
+              "type": "string"
+            },
+            "external_id": {
+              "description": "This field can be set to another unique ID. In the case that the Label has been imported from another tool, the ID in the other tool can be indicated here.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "global_id": {
+              "type": "string"
+            },
+            "id": {
+              "description": "The unique ID of the Label.",
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "description": "The name of the Label.",
+              "type": "string"
+            },
+            "stats": {
+              "additionalProperties": false,
+              "description": "A group of calculated values for this Label. This is not included if the slim? flag is set to true for the List Labels endpoint.",
+              "properties": {
+                "num_epics": {
+                  "description": "The total number of Epics with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_epics_completed": {
+                  "description": "The number of completed Epics associated with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_epics_in_progress": {
+                  "description": "The number of in progress epics associated with this label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_epics_total": {
+                  "description": "The total number of Epics associated with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_epics_unstarted": {
+                  "description": "The number of unstarted epics associated with this label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_points_backlog": {
+                  "description": "The total number of backlog points with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_points_completed": {
+                  "description": "The total number of completed points with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_points_in_progress": {
+                  "description": "The total number of in-progress points with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_points_total": {
+                  "description": "The total number of points with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_points_unstarted": {
+                  "description": "The total number of unstarted points with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_related_documents": {
+                  "description": "The total number of Documents associated this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_stories_backlog": {
+                  "description": "The total number of stories backlog Stories with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_stories_completed": {
+                  "description": "The total number of completed Stories with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_stories_in_progress": {
+                  "description": "The total number of in-progress Stories with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_stories_total": {
+                  "description": "The total number of Stories with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_stories_unestimated": {
+                  "description": "The total number of Stories with no point estimate with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "num_stories_unstarted": {
+                  "description": "The total number of stories unstarted Stories with this Label.",
+                  "format": "int64",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "num_related_documents",
+                "num_epics",
+                "num_stories_unstarted",
+                "num_stories_total",
+                "num_epics_unstarted",
+                "num_epics_in_progress",
+                "num_points_unstarted",
+                "num_stories_unestimated",
+                "num_points_in_progress",
+                "num_epics_total",
+                "num_stories_completed",
+                "num_points_completed",
+                "num_stories_backlog",
+                "num_points_total",
+                "num_stories_in_progress",
+                "num_points_backlog",
+                "num_epics_completed"
+              ],
+              "type": "object"
+            },
+            "updated_at": {
+              "description": "The time/date that the Label was updated.",
+              "format": "date-time",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "app_url",
+            "description",
+            "archived",
+            "entity_type",
+            "color",
+            "name",
+            "global_id",
+            "updated_at",
+            "external_id",
+            "id",
+            "created_at"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "member_mention_ids": {
+        "description": "An array of Member IDs that have been mentioned in the Story description.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "mention_ids": {
+        "description": "`Deprecated:` use `member_mention_ids`.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "name": {
+        "description": "The name of the iteration.",
+        "type": "string"
+      },
+      "start_date": {
+        "description": "The date this iteration begins.",
+        "format": "date-time",
+        "type": "string"
+      },
+      "stats": {
+        "additionalProperties": false,
+        "description": "A group of calculated values for this Iteration.",
+        "properties": {
+          "average_cycle_time": {
+            "description": "The average cycle time (in seconds) of completed stories in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "average_lead_time": {
+            "description": "The average lead time (in seconds) of completed stories in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points": {
+            "description": "The total number of points in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points_backlog": {
+            "description": "The total number of backlog points in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points_done": {
+            "description": "The total number of completed points in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points_started": {
+            "description": "The total number of started points in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points_unstarted": {
+            "description": "The total number of unstarted points in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_related_documents": {
+            "description": "The total number of documents related to an Iteration",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_backlog": {
+            "description": "The total number of backlog Stories in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_done": {
+            "description": "The total number of done Stories in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_started": {
+            "description": "The total number of started Stories in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_unestimated": {
+            "description": "The total number of Stories with no point estimate.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_unstarted": {
+            "description": "The total number of unstarted Stories in this Iteration.",
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "num_points_done",
+          "num_related_documents",
+          "num_stories_unstarted",
+          "num_points_started",
+          "num_points_unstarted",
+          "num_stories_started",
+          "num_stories_unestimated",
+          "num_stories_backlog",
+          "num_points_backlog",
+          "num_points",
+          "num_stories_done"
+        ],
+        "type": "object"
+      },
+      "status": {
+        "description": "The status of the iteration. Values are either \"unstarted\", \"started\", or \"done\".",
+        "type": "string"
+      },
+      "updated_at": {
+        "description": "The instant when this iteration was last updated.",
+        "format": "date-time",
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_url",
+      "entity_type",
+      "labels",
+      "mention_ids",
+      "member_mention_ids",
+      "associated_groups",
+      "name",
+      "global_id",
+      "label_ids",
+      "updated_at",
+      "group_mention_ids",
+      "end_date",
+      "follower_ids",
+      "group_ids",
+      "start_date",
+      "status",
+      "id",
+      "stats",
+      "created_at"
+    ],
+    "type": "object"
+  },
+  "stream": "iterations",
+  "tap_stream_id": "iterations"
+}

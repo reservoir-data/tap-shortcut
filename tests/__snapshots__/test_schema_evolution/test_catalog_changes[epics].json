@@ -1,0 +1,1035 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "app_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "description"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "archived"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "started"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "labels"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "member_mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "associated_groups"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "project_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stories_without_projects"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "completed_at_override"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "productboard_plugin_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "started_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "completed_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "objective_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "global_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "completed"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "productboard_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "planned_start_date"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "milestone_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "requested_by_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "epic_state_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "label_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "started_at_override"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "group_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "group_mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "productboard_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "follower_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "group_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "owner_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "external_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "position"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "productboard_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "deadline"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points_done"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_related_documents"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_unstarted"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_total"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "last_story_update"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points_started"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points_unstarted"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_started"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_unestimated"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_backlog"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points_backlog"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_points"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "stats",
+        "properties",
+        "num_stories_done"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "description": "EpicSlim represents the same resource as an Epic but is more light-weight, including all Epic fields except the comments array. The description string can be optionally included. Use the [Get Epic](#Get-Epic) endpoint to fetch the unabridged payload for an Epic.",
+    "properties": {
+      "app_url": {
+        "description": "The Shortcut application url for the Epic.",
+        "type": "string"
+      },
+      "archived": {
+        "description": "True/false boolean that indicates whether the Epic is archived or not.",
+        "type": "boolean"
+      },
+      "associated_groups": {
+        "description": "An array containing Group IDs and Group-owned story counts for the Epic's associated groups.",
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "associated_stories_count": {
+              "description": "The number of stories this Group owns in the Epic.",
+              "format": "int64",
+              "type": "integer"
+            },
+            "group_id": {
+              "description": "The Group ID of the associated group.",
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          "required": [
+            "group_id"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "completed": {
+        "description": "A true/false boolean indicating if the Epic has been completed.",
+        "type": "boolean"
+      },
+      "completed_at": {
+        "description": "The time/date the Epic was completed.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "completed_at_override": {
+        "description": "A manual override for the time/date the Epic was completed.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "The time/date the Epic was created.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deadline": {
+        "description": "The Epic's deadline.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "description": {
+        "description": "The Epic's description.",
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "entity_type": {
+        "description": "A string description of this resource.",
+        "type": "string"
+      },
+      "epic_state_id": {
+        "description": "The ID of the Epic State.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "external_id": {
+        "description": "This field can be set to another unique ID. In the case that the Epic has been imported from another tool, the ID in the other tool can be indicated here.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "follower_ids": {
+        "description": "An array of UUIDs for any Members you want to add as Followers on this Epic.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "global_id": {
+        "type": "string"
+      },
+      "group_id": {
+        "description": "`Deprecated` The ID of the group to associate with the epic. Use `group_ids`.",
+        "format": "uuid",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "group_ids": {
+        "description": "An array of UUIDS for Groups to which this Epic is related.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "group_mention_ids": {
+        "description": "An array of Group IDs that have been mentioned in the Epic description.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "id": {
+        "description": "The unique ID of the Epic.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "label_ids": {
+        "description": "An array of Label ids attached to the Epic.",
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "labels": {
+        "description": "An array of Labels attached to the Epic.",
+        "items": {
+          "additionalProperties": false,
+          "description": "A Label can be used to associate and filter Stories and Epics, and also create new Workspaces. A slim Label does not include aggregate stats. Fetch the Label using the labels endpoint to retrieve them.",
+          "properties": {
+            "app_url": {
+              "description": "The Shortcut application url for the Label.",
+              "type": "string"
+            },
+            "archived": {
+              "description": "A true/false boolean indicating if the Label has been archived.",
+              "type": "boolean"
+            },
+            "color": {
+              "description": "The hex color to be displayed with the Label (for example, \"#ff0000\").",
+              "format": "css-color",
+              "minLength": 1,
+              "pattern": "^#[a-fA-F0-9]{6}$",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "created_at": {
+              "description": "The time/date that the Label was created.",
+              "format": "date-time",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "description": {
+              "description": "The description of the Label.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "entity_type": {
+              "description": "A string description of this resource.",
+              "type": "string"
+            },
+            "external_id": {
+              "description": "This field can be set to another unique ID. In the case that the Label has been imported from another tool, the ID in the other tool can be indicated here.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "global_id": {
+              "type": "string"
+            },
+            "id": {
+              "description": "The unique ID of the Label.",
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "description": "The name of the Label.",
+              "type": "string"
+            },
+            "updated_at": {
+              "description": "The time/date that the Label was updated.",
+              "format": "date-time",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "app_url",
+            "description",
+            "archived",
+            "entity_type",
+            "color",
+            "name",
+            "global_id",
+            "updated_at",
+            "external_id",
+            "id",
+            "created_at"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "member_mention_ids": {
+        "description": "An array of Member IDs that have been mentioned in the Epic description.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "mention_ids": {
+        "description": "`Deprecated:` use `member_mention_ids`.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "milestone_id": {
+        "description": "`Deprecated` The ID of the Objective this Epic is related to. Use `objective_ids`.",
+        "format": "int64",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "name": {
+        "description": "The name of the Epic.",
+        "type": "string"
+      },
+      "objective_ids": {
+        "description": "An array of IDs for Objectives to which this epic is related.",
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "owner_ids": {
+        "description": "An array of UUIDs for any members you want to add as Owners on this new Epic.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "planned_start_date": {
+        "description": "The Epic's planned start date.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "position": {
+        "description": "The Epic's relative position in the Epic workflow state.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "productboard_id": {
+        "description": "The ID of the associated productboard feature.",
+        "format": "uuid",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "productboard_name": {
+        "description": "The name of the associated productboard feature.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "productboard_plugin_id": {
+        "description": "The ID of the associated productboard integration.",
+        "format": "uuid",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "productboard_url": {
+        "description": "The URL of the associated productboard feature.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "project_ids": {
+        "description": "The IDs of Projects related to this Epic.",
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "requested_by_id": {
+        "description": "The ID of the Member that requested the epic.",
+        "format": "uuid",
+        "type": "string"
+      },
+      "started": {
+        "description": "A true/false boolean indicating if the Epic has been started.",
+        "type": "boolean"
+      },
+      "started_at": {
+        "description": "The time/date the Epic was started.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "started_at_override": {
+        "description": "A manual override for the time/date the Epic was started.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "state": {
+        "description": "`Deprecated` The workflow state that the Epic is in.",
+        "type": "string"
+      },
+      "stats": {
+        "additionalProperties": false,
+        "description": "A group of calculated values for this Epic.",
+        "properties": {
+          "last_story_update": {
+            "description": "The date of the last update of a Story in this Epic.",
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "num_points": {
+            "description": "The total number of points in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points_backlog": {
+            "description": "The total number of backlog points in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points_done": {
+            "description": "The total number of completed points in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points_started": {
+            "description": "The total number of started points in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_points_unstarted": {
+            "description": "The total number of unstarted points in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_related_documents": {
+            "description": "The total number of documents associated with this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_backlog": {
+            "description": "The total number of backlog Stories in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_done": {
+            "description": "The total number of done Stories in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_started": {
+            "description": "The total number of started Stories in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_total": {
+            "description": "The total number of Stories in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_unestimated": {
+            "description": "The total number of Stories with no point estimate.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "num_stories_unstarted": {
+            "description": "The total number of unstarted Stories in this Epic.",
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "num_points_done",
+          "num_related_documents",
+          "num_stories_unstarted",
+          "num_stories_total",
+          "last_story_update",
+          "num_points_started",
+          "num_points_unstarted",
+          "num_stories_started",
+          "num_stories_unestimated",
+          "num_stories_backlog",
+          "num_points_backlog",
+          "num_points",
+          "num_stories_done"
+        ],
+        "type": "object"
+      },
+      "stories_without_projects": {
+        "description": "The number of stories in this epic which are not associated with a project.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "updated_at": {
+        "description": "The time/date the Epic was updated.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "app_url",
+      "archived",
+      "started",
+      "entity_type",
+      "labels",
+      "mention_ids",
+      "member_mention_ids",
+      "associated_groups",
+      "project_ids",
+      "stories_without_projects",
+      "completed_at_override",
+      "productboard_plugin_id",
+      "started_at",
+      "completed_at",
+      "objective_ids",
+      "name",
+      "global_id",
+      "completed",
+      "productboard_url",
+      "planned_start_date",
+      "state",
+      "milestone_id",
+      "requested_by_id",
+      "epic_state_id",
+      "label_ids",
+      "started_at_override",
+      "group_id",
+      "updated_at",
+      "group_mention_ids",
+      "productboard_id",
+      "follower_ids",
+      "group_ids",
+      "owner_ids",
+      "external_id",
+      "id",
+      "position",
+      "productboard_name",
+      "deadline",
+      "stats",
+      "created_at"
+    ],
+    "type": "object"
+  },
+  "stream": "epics",
+  "tap_stream_id": "epics"
+}

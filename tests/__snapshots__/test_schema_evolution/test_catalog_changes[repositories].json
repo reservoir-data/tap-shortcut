@@ -1,0 +1,186 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "external_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "full_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "description": "Repository refers to a VCS repository.",
+    "properties": {
+      "created_at": {
+        "description": "The time/date the Repository was created.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "entity_type": {
+        "description": "A string description of this resource.",
+        "type": "string"
+      },
+      "external_id": {
+        "description": "The VCS unique identifier for the Repository.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "full_name": {
+        "description": "The full name of the VCS repository.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "id": {
+        "description": "The ID associated to the VCS repository in Shortcut.",
+        "format": "int64",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "name": {
+        "description": "The shorthand name of the VCS repository.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "type": {
+        "description": "The VCS provider for the Repository.",
+        "enum": [
+          "github",
+          "gitlab",
+          "bitbucket",
+          null
+        ],
+        "type": "string"
+      },
+      "updated_at": {
+        "description": "The time/date the Repository was updated.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "url": {
+        "description": "The URL of the Repository.",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "entity_type",
+      "name",
+      "type",
+      "updated_at",
+      "external_id",
+      "id",
+      "url",
+      "full_name",
+      "created_at"
+    ],
+    "type": "object"
+  },
+  "stream": "repositories",
+  "tap_stream_id": "repositories"
+}

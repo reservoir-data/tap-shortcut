@@ -1,0 +1,304 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "description"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "story_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "member_mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "thumbnail_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "size"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "uploader_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "content_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "filename"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "group_mention_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "external_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "description": "An UploadedFile is any document uploaded to your Shortcut Workspace. Files attached from a third-party service are different: see the Linked Files endpoint.",
+    "properties": {
+      "content_type": {
+        "description": "Free form string corresponding to a text or image file.",
+        "type": "string"
+      },
+      "created_at": {
+        "description": "The time/date that the file was created.",
+        "format": "date-time",
+        "type": "string"
+      },
+      "description": {
+        "description": "The description of the file.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "entity_type": {
+        "description": "A string description of this resource.",
+        "type": "string"
+      },
+      "external_id": {
+        "description": "This field can be set to another unique ID. In the case that the File has been imported from another tool, the ID in the other tool can be indicated here.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "filename": {
+        "description": "The name assigned to the file in Shortcut upon upload.",
+        "type": "string"
+      },
+      "group_mention_ids": {
+        "description": "The unique IDs of the Groups who are mentioned in the file description.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "id": {
+        "description": "The unique ID for the file.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "member_mention_ids": {
+        "description": "The unique IDs of the Members who are mentioned in the file description.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "mention_ids": {
+        "description": "`Deprecated:` use `member_mention_ids`.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "name": {
+        "description": "The optional User-specified name of the file.",
+        "type": "string"
+      },
+      "size": {
+        "description": "The size of the file.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "story_ids": {
+        "description": "The unique IDs of the Stories associated with this file.",
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "thumbnail_url": {
+        "description": "The url where the thumbnail of the file can be found in Shortcut.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_at": {
+        "description": "The time/date that the file was updated.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "uploader_id": {
+        "description": "The unique ID of the Member who uploaded the file.",
+        "format": "uuid",
+        "type": "string"
+      },
+      "url": {
+        "description": "The URL for the file.",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "description",
+      "entity_type",
+      "story_ids",
+      "mention_ids",
+      "member_mention_ids",
+      "name",
+      "thumbnail_url",
+      "size",
+      "uploader_id",
+      "content_type",
+      "updated_at",
+      "filename",
+      "group_mention_ids",
+      "external_id",
+      "id",
+      "url",
+      "created_at"
+    ],
+    "type": "object"
+  },
+  "stream": "files",
+  "tap_stream_id": "files"
+}

@@ -1,0 +1,448 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "app_url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "description"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "archived"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "color"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "num_stories_started"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "mention_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "global_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "color_key"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "num_stories"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "num_epics_started"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "num_stories_backlog"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "display_icon"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "display_icon",
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "display_icon",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "display_icon",
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "display_icon",
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "display_icon",
+        "properties",
+        "url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "default_workflow_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "member_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "workflow_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "description": "A Group.",
+    "properties": {
+      "app_url": {
+        "description": "The Shortcut application url for the Group.",
+        "type": "string"
+      },
+      "archived": {
+        "description": "Whether or not the Group is archived.",
+        "type": "boolean"
+      },
+      "color": {
+        "description": "The hex color to be displayed with the Group (for example, \"#ff0000\").",
+        "format": "css-color",
+        "minLength": 1,
+        "pattern": "^#[a-fA-F0-9]{6}$",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "color_key": {
+        "description": "The color key to be displayed with the Group.",
+        "enum": [
+          "blue",
+          "purple",
+          "midnight-blue",
+          "orange",
+          "yellow-green",
+          "brass",
+          "gray",
+          "fuchsia",
+          "yellow",
+          "pink",
+          "sky-blue",
+          "green",
+          "red",
+          "black",
+          "slate",
+          "turquoise",
+          null
+        ],
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "description": "The instant when this group was created.",
+        "format": "date-time",
+        "type": "string"
+      },
+      "default_workflow_id": {
+        "description": "The ID of the default workflow for stories created in this group.",
+        "format": "int64",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "description": {
+        "description": "The description of the Group.",
+        "type": "string"
+      },
+      "display_icon": {
+        "additionalProperties": false,
+        "description": "Icons are used to attach images to Groups, Workspaces, Members, and Loading screens in the Shortcut web application.",
+        "properties": {
+          "created_at": {
+            "description": "The time/date that the Icon was created.",
+            "format": "date-time",
+            "type": "string"
+          },
+          "entity_type": {
+            "description": "A string description of this resource.",
+            "type": "string"
+          },
+          "id": {
+            "description": "The unique ID of the Icon.",
+            "format": "uuid",
+            "type": "string"
+          },
+          "updated_at": {
+            "description": "The time/date that the Icon was updated.",
+            "format": "date-time",
+            "type": "string"
+          },
+          "url": {
+            "description": "The URL of the Icon.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "entity_type",
+          "id",
+          "created_at",
+          "updated_at",
+          "url"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "entity_type": {
+        "description": "A string description of this resource.",
+        "type": "string"
+      },
+      "global_id": {
+        "type": "string"
+      },
+      "id": {
+        "description": "The id of the Group.",
+        "format": "uuid",
+        "type": "string"
+      },
+      "member_ids": {
+        "description": "The Member IDs contain within the Group.",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "mention_name": {
+        "description": "The mention name of the Group.",
+        "minLength": 1,
+        "pattern": "^[a-z0-9\\-\\_\\.]+$",
+        "type": "string"
+      },
+      "name": {
+        "description": "The name of the Group.",
+        "type": "string"
+      },
+      "num_epics_started": {
+        "description": "The number of epics assigned to the group which are in the started workflow state.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "num_stories": {
+        "description": "The total number of stories assigned to the group.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "num_stories_backlog": {
+        "description": "The number of stories assigned to the group which are in a backlog workflow state.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "num_stories_started": {
+        "description": "The number of stories assigned to the group which are in a started workflow state.",
+        "format": "int64",
+        "type": "integer"
+      },
+      "updated_at": {
+        "description": "The last instant when this group was updated.",
+        "format": "date-time",
+        "type": "string"
+      },
+      "workflow_ids": {
+        "description": "The Workflow IDs contained within the Group.",
+        "items": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "app_url",
+      "description",
+      "archived",
+      "entity_type",
+      "color",
+      "num_stories_started",
+      "mention_name",
+      "name",
+      "global_id",
+      "color_key",
+      "num_stories",
+      "num_epics_started",
+      "updated_at",
+      "num_stories_backlog",
+      "id",
+      "display_icon",
+      "member_ids",
+      "workflow_ids",
+      "created_at"
+    ],
+    "type": "object"
+  },
+  "stream": "groups",
+  "tap_stream_id": "groups"
+}
