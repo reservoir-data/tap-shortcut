@@ -7,28 +7,36 @@ on:
   - cron: '0 12 * * 5'
 
 env:
+  FORCE_COLOR: "1"
   # renovate: datasource=pypi depName=uv
   UV_VERSION: 0.9.11
 
 jobs:
   update_openapi_specification:
+    name: Update Catalog
     runs-on: ubuntu-24.04
     permissions:
-      contents: write
-      pull-requests: write
+      contents: write  # Required by peter-evans/create-pull-request
+      pull-requests: write  # Required by peter-evans/create-pull-request
     steps:
     - uses: actions/create-github-app-token@7e473efe3cb98aa54f8d4bac15400b15fad77d94 # v2.2.0
       id: generate-token
       with:
-        app-id: ${{ vars.APP_ID }}
-        private-key: ${{ secrets.APP_PRIVATE_KEY }}
+        app-id: ${{ vars.RESERVOIR_GITHUB_APP_ID }}
+        private-key: ${{ secrets.RESERVOIR_GITHUB_APP_PKEY }}
     - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
     - uses: astral-sh/setup-uv@1e862dfacbd1d6d858c55d9b792c756523627244 # v7.1.4
       with:
         version: ${{ env.UV_VERSION }}
     - run: uv run --script scripts/update_openapi.py
+    - run: uv run pytest --snapshot-update tests/test_schema_evolution.py
+    - id: check_snapshot_changes
+      continue-on-error: true
+      run: git diff --quiet tests/__snapshots__
     - uses: peter-evans/create-pull-request@84ae59a2cdc2258d6fa0732dd66352dddae2a412 # v7.0.9
+      if: steps.check_snapshot_changes.outcome == 'failure'
       with:
-        title: 'chore: Update OpenAPI Specification for shortcut.com'
+        title: 'chore: Update tap catalog from fresh OpenAPI Specification for shortcut.com'
+        commit: 'chore: Update tap catalog from fresh OpenAPI Specification for shortcut.com'
         token: ${{ steps.generate-token.outputs.token }}
         signoff: true
