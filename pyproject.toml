@@ -52,8 +52,9 @@ dev = [
 ]
 testing = [
   "deptry>=0.12",
-  "pytest>=7.4",
+  "pytest>=9",
   "singer-sdk[testing]",
+  "syrupy>=5",
 ]
 typing = [
   "mypy",
@@ -111,8 +112,9 @@ types-requests = "requests"
 [tool.pyproject-fmt]
 max_supported_python = "3.14"
 
-[tool.pytest.ini_options]
-addopts = "-vvv"
+[tool.pytest]
+minversion = "9.0"
+addopts = [ "-vvv" ]
 
 [tool.tox]
 min_version = "4.22"

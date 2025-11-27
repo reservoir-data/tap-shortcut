@@ -1,0 +1,527 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "metadata": [
+    {
+      "breadcrumb": [
+        "properties",
+        "role"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "disabled"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "global_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "state"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_without_invite"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "group_ids"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "automatic"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "installation_id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "deactivated"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "two_factor_auth_activated"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "mention_name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "name"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "is_agent"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "gravatar_hash"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "display_icon"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "display_icon",
+        "properties",
+        "entity_type"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "display_icon",
+        "properties",
+        "id"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "display_icon",
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "display_icon",
+        "properties",
+        "updated_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "display_icon",
+        "properties",
+        "url"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "is_owner"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "email_address"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "created_at"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "replaced_by"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [],
+      "metadata": {
+        "inclusion": "available",
+        "selected": true,
+        "selected-by-default": true,
+        "table-key-properties": [
+          "id"
+        ]
+      }
+    }
+  ],
+  "replication_method": "FULL_TABLE",
+  "schema": {
+    "additionalProperties": false,
+    "description": "Details about an individual user within the Workspace.",
+    "properties": {
+      "created_at": {
+        "description": "The time/date the Member was created.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_without_invite": {
+        "description": "Whether this member was created as a placeholder entity.",
+        "type": "boolean"
+      },
+      "disabled": {
+        "description": "True/false boolean indicating whether the Member has been disabled within the Workspace.",
+        "type": "boolean"
+      },
+      "entity_type": {
+        "description": "A string description of this resource.",
+        "type": "string"
+      },
+      "global_id": {
+        "type": "string"
+      },
+      "group_ids": {
+        "description": "The Member's group ids",
+        "items": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "id": {
+        "description": "The Member's ID in Shortcut.",
+        "format": "uuid",
+        "type": "string"
+      },
+      "installation_id": {
+        "description": "Only set for agents. The installation id associated with this agent.",
+        "format": "uuid",
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "profile": {
+        "additionalProperties": false,
+        "description": "A group of Member profile details.",
+        "properties": {
+          "deactivated": {
+            "description": "A true/false boolean indicating whether the Member has been deactivated within Shortcut.",
+            "type": "boolean"
+          },
+          "display_icon": {
+            "additionalProperties": false,
+            "description": "Icons are used to attach images to Groups, Workspaces, Members, and Loading screens in the Shortcut web application.",
+            "properties": {
+              "created_at": {
+                "description": "The time/date that the Icon was created.",
+                "format": "date-time",
+                "type": "string"
+              },
+              "entity_type": {
+                "description": "A string description of this resource.",
+                "type": "string"
+              },
+              "id": {
+                "description": "The unique ID of the Icon.",
+                "format": "uuid",
+                "type": "string"
+              },
+              "updated_at": {
+                "description": "The time/date that the Icon was updated.",
+                "format": "date-time",
+                "type": "string"
+              },
+              "url": {
+                "description": "The URL of the Icon.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "entity_type",
+              "id",
+              "created_at",
+              "updated_at",
+              "url"
+            ],
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "email_address": {
+            "description": "The primary email address of the Member with the Organization.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "entity_type": {
+            "description": "A string description of this resource.",
+            "type": "string"
+          },
+          "gravatar_hash": {
+            "description": "This is the gravatar hash associated with email_address.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "The unique identifier of the profile.",
+            "format": "uuid",
+            "type": "string"
+          },
+          "is_agent": {
+            "description": "Whether this profile is an Agent/Bot user.",
+            "type": "boolean"
+          },
+          "is_owner": {
+            "description": "A boolean indicating whether this profile is an owner at their associated organization.",
+            "type": "boolean"
+          },
+          "mention_name": {
+            "description": "The Member's username within the Organization.",
+            "type": "string"
+          },
+          "name": {
+            "description": "The Member's name within the Organization.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "two_factor_auth_activated": {
+            "description": "If Two Factor Authentication is activated for this User.",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "entity_type",
+          "deactivated",
+          "mention_name",
+          "name",
+          "gravatar_hash",
+          "id",
+          "display_icon",
+          "is_owner",
+          "email_address"
+        ],
+        "type": "object"
+      },
+      "replaced_by": {
+        "description": "The id of the member that replaces this one when merged.",
+        "format": "uuid",
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "role": {
+        "description": "The Member's role in the Workspace.",
+        "type": "string"
+      },
+      "state": {
+        "description": "The user state, one of partial, full, disabled, or imported.  A partial user is disabled, has no means to log in, and is not an import user.  A full user is enabled and has a means to log in.  A disabled user is disabled and has a means to log in.  An import user is disabled, has no means to log in, and is marked as an import user.",
+        "enum": [
+          "partial",
+          "full",
+          "disabled",
+          "imported",
+          null
+        ],
+        "type": "string"
+      },
+      "updated_at": {
+        "description": "The time/date the Member was last updated.",
+        "format": "date-time",
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "role",
+      "entity_type",
+      "disabled",
+      "global_id",
+      "state",
+      "updated_at",
+      "created_without_invite",
+      "group_ids",
+      "id",
+      "profile",
+      "created_at"
+    ],
+    "type": "object"
+  },
+  "stream": "members",
+  "tap_stream_id": "members"
+}
