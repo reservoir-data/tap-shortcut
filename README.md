@@ -3,11 +3,23 @@
 # tap-shortcut
 
 <div>
+  <a href="https://github.com/reservoir-data/tap-shortcut/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/reservoir-data/tap-shortcut"/>
+  </a>
   <a href="https://results.pre-commit.ci/latest/github/reservoir-data/tap-shortcut/main">
     <img alt="pre-commit.ci status" src="https://results.pre-commit.ci/badge/github/reservoir-data/tap-shortcut/main.svg"/>
   </a>
-  <a href="https://github.com/reservoir-data/tap-shortcut/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/reservoir-data/tap-shortcut"/>
+  <a href="https://scientific-python.org/specs/spec-0000/">
+    <img alt="SPEC 0 — Minimum Supported Dependencies" src="https://img.shields.io/badge/SPEC-0-green"/>
+  </a>
+  <a href="https://github.com/astral-sh/ruff">
+    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="Ruff" style="max-width:100%;">
+  </a>
+  <a href="https://github.com/astral-sh/uv">
+   <img alt="uv" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json"/>
+  </a>
+  <a href="https://pypi.org/p/tap-shortcut/">
+    <img alt="Python versions" src="https://img.shields.io/pypi/pyversions/tap-shortcut"/>
   </a>
 </div>
 

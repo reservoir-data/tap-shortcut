@@ -2,15 +2,10 @@
 
 from __future__ import annotations
 
-import sys
 import typing as t
+from typing import override
 
 from tap_shortcut.client import ShortcutStream
-
-if sys.version_info >= (3, 12):
-    from typing import override
-else:
-    from typing_extensions import override
 
 if t.TYPE_CHECKING:
     from singer_sdk.helpers.types import Context, Record
