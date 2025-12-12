@@ -3,18 +3,13 @@
 from __future__ import annotations
 
 import importlib.resources
-import sys
 import typing as t
 from copy import deepcopy
+from typing import override
 
 from singer_sdk import OpenAPISchema, RESTStream, StreamSchema
 from singer_sdk.authenticators import APIKeyAuthenticator
 from toolz.dicttoolz import get_in
-
-if sys.version_info >= (3, 12):
-    from typing import override
-else:
-    from typing_extensions import override
 
 SPEC = importlib.resources.files("tap_shortcut") / "openapi.json"
 
