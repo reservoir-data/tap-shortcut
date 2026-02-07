@@ -9,7 +9,7 @@ on:
 env:
   FORCE_COLOR: "1"
   # renovate: datasource=pypi depName=uv
-  UV_VERSION: 0.9.18
+  UV_VERSION: 0.9.28
 
 jobs:
   update_openapi_specification:
