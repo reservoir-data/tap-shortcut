@@ -59,12 +59,12 @@ typing = [
   "types-requests",
 ]
 
-[tool.hatch.version]
-source = "vcs"
+[tool.hatch]
+version.source = "vcs"
 
 [tool.uv]
-preview = true
 required-version = ">=0.5.19"
+preview = true
 
 [tool.ruff]
 line-length = 88
@@ -72,7 +72,6 @@ src = [
   "tap_shortcut",
   "tests",
 ]
-
 lint.select = [
   "ALL",
 ]
@@ -81,7 +80,6 @@ lint.ignore = [
   "DJ",     # flake8-django
   "ISC001", # single-line-implicit-string-concatenation
 ]
-
 lint.per-file-ignores."noxfile.py" = [
   "ANN",
 ]
@@ -101,10 +99,10 @@ lint.isort.required-imports = [
 ]
 lint.pydocstyle.convention = "google"
 
-[tool.deptry.package_module_name_map]
-mypy = "mypy"
-ty = "ty"
-types-requests = "requests"
+[tool.deptry]
+package_module_name_map.mypy = "mypy"
+package_module_name_map.ty = "ty"
+package_module_name_map.types-requests = "requests"
 
 [tool.pyproject-fmt]
 max_supported_python = "3.14"
@@ -126,26 +124,18 @@ env_list = [
   "3.13",
   "3.12",
 ]
-
-[tool.tox.env.dependencies]
-dependency_groups = [ "testing" ]
-commands = [ [ "deptry", "." ] ]
-
-[tool.tox.env.sync]
-commands = [ [ "tap-shortcut", { replace = "posargs", default = [ "--config=ENV" ], extend = true } ] ]
-
-[tool.tox.env.typing]
-dependency_groups = [ "testing", "typing" ]
-commands = [
+env.dependencies.dependency_groups = [ "testing" ]
+env.dependencies.commands = [ [ "deptry", "." ] ]
+env.sync.commands = [ [ "tap-shortcut", { replace = "posargs", default = [ "--config=ENV" ], extend = true } ] ]
+env.typing.dependency_groups = [ "testing", "typing" ]
+env.typing.commands = [
   [ "mypy", "--strict", { replace = "posargs", default = [ "tap_shortcut", "tests" ], extend = true } ],
   [ "ty", "check", { replace = "posargs", default = [ "tap_shortcut", "tests" ], extend = true } ],
 ]
-
-[tool.tox.env_run_base]
-runner = "uv-venv-lock-runner"
-pass_env = [ "TAP_SHORTCUT_*" ]
-dependency_groups = [ "testing" ]
-commands = [ [ "pytest", { replace = "posargs", default = [ "tests" ], extend = true } ] ]
+env_run_base.runner = "uv-venv-lock-runner"
+env_run_base.pass_env = [ "TAP_SHORTCUT_*" ]
+env_run_base.dependency_groups = [ "testing" ]
+env_run_base.commands = [ [ "pytest", { replace = "posargs", default = [ "tests" ], extend = true } ] ]
 
 [tool.mypy]
 warn_redundant_casts = true
@@ -154,9 +144,8 @@ warn_no_return = true
 warn_unreachable = true
 warn_unused_configs = true
 warn_unused_ignores = true
-
-[[tool.mypy.overrides]]
-ignore_missing_imports = true
-module = [
-  "toolz.*", # https://github.com/pytoolz/toolz/issues/496
+overrides = [
+  { ignore_missing_imports = true, module = [
+    "toolz.*", # https://github.com/pytoolz/toolz/issues/496
+  ] },
 ]
