@@ -34,7 +34,7 @@ dynamic = [
 ]
 dependencies = [
   "requests",
-  "singer-sdk~=0.53.2",
+  "singer-sdk~=0.54.0a4",
   "toolz==1.1",
 ]
 urls.Documentation = "https://github.com/reservoir-data/tap-shortcut#readme"
