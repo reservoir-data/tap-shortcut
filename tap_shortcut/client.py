@@ -68,7 +68,7 @@ class ShortcutOpenAPISchema(OpenAPISchema[ResponseKey]):
 
     @override
     def get_unresolved_schema(self, key: ResponseKey) -> dict[str, t.Any]:
-        return get_in(  # type: ignore[no-any-return]
+        return get_in(  # ty: ignore[invalid-return-type]
             keys=(
                 "paths",
                 key.path,

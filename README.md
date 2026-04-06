@@ -29,17 +29,17 @@ Singer tap for Shortcut. Built with the [Meltano Tap SDK](https://sdk.meltano.co
 
 ## Capabilities
 
-* `catalog`
-* `state`
-* `discover`
-* `about`
-* `stream-maps`
+- `catalog`
+- `state`
+- `discover`
+- `about`
+- `stream-maps`
 
 ## Settings
 
-| Setting | Required | Default | Description    |
+| Setting | Required | Default | Description |
 |:--------|:--------:|:-------:|:---------------|
-| token   | True     | None    | Shortcut Token |
+| token | True | None | Shortcut Token |
 
 A full list of supported settings and capabilities is available by running: `tap-shortcut --about`
 
