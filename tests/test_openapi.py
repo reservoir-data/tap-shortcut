@@ -5,7 +5,6 @@ from __future__ import annotations
 import typing as t
 
 import pytest
-
 from tap_shortcut.client import handle_x_nullable
 
 
