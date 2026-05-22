@@ -2,7 +2,7 @@
 # /// script
 # dependencies = [
 #   # renovate: datasource=pypi depName=requests
-#   "requests==2.32.4",
+#   "requests==2.34.2",
 # ]
 # ///
 

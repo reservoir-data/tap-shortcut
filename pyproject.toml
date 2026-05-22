@@ -26,8 +26,7 @@ dynamic = [
   "version",
 ]
 dependencies = [
-  "requests",
-  "singer-sdk~=0.54.0a4",
+  "singer-sdk~=0.54.2",
   "toolz==1.1",
 ]
 [[project.authors]]
@@ -58,7 +57,6 @@ typing = [
   "mypy",
   "toolz-stubs>=0.4",
   "ty>=0.0.1a16",
-  "types-requests",
   { include-group = "testing" },
 ]
 
@@ -103,7 +101,6 @@ pydocstyle.convention = "google"
 mypy = "mypy"
 toolz-stubs = "toolz"
 ty = "ty"
-types-requests = "requests"
 
 [tool.pyproject-fmt]
 table_format = "long"
