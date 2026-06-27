@@ -44,19 +44,19 @@ Source = "https://github.com/reservoir-data/tap-shortcut"
 
 [dependency-groups]
 dev = [
+  "deptry>=0.25",
   { include-group = "testing" },
   { include-group = "typing" },
 ]
 testing = [
-  "deptry>=0.12",
   "pytest>=9",
   "singer-sdk[testing]",
   "syrupy>=5",
 ]
 typing = [
-  "mypy",
+  "mypy>=2.1",
   "toolz-stubs>=0.4",
-  "ty>=0.0.1a16",
+  "ty>=0.0.50",
   { include-group = "testing" },
 ]
 
@@ -75,6 +75,7 @@ src = [
   "tap_shortcut",
   "tests",
 ]
+preview = true
 [tool.ruff.lint]
 select = [
   "ALL",
@@ -96,11 +97,6 @@ unfixable = [
   "ERA001", # commented-out-code
 ]
 pydocstyle.convention = "google"
-
-[tool.deptry.package_module_name_map]
-mypy = "mypy"
-toolz-stubs = "toolz"
-ty = "ty"
 
 [tool.pyproject-fmt]
 table_format = "long"
@@ -145,11 +141,11 @@ env_list = [
 ]
 [tool.tox.env.dependencies]
 description = "check for unused, missing and transitive dependencies"
-dependency_groups = [ "testing" ]
+dependency_groups = [ "dev" ]
 commands = [ [ "deptry", "." ] ]
 labels = [ "check" ]
 [tool.tox.env.test]
-base_python_python = [ ".python-version" ]
+base_python_file = [ ".python-version" ]
 [tool.tox.env.typing]
 description = "type checks"
 dependency_groups = [ "testing", "typing" ]

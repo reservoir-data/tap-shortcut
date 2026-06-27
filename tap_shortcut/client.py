@@ -1,4 +1,7 @@
-"""REST client handling, including ShortcutStream base class."""
+"""REST client handling, including ShortcutStream base class.
+
+Copyright (c) 2025 Edgar Ramírez-Mondragón
+"""
 
 from __future__ import annotations
 
@@ -125,8 +128,5 @@ class ShortcutStream(RESTStream[None]):
 
         Args:
             schema: A dictionary of the schema.
-
-        Returns:
-            A dictionary of the processed schema.
         """
         _handle_runtime_nullables(schema, cls.extra_nullable_fields)
