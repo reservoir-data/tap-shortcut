@@ -1,4 +1,7 @@
-"""Stream type classes for tap-shortcut."""
+"""Stream type classes for tap-shortcut.
+
+Copyright (c) 2026 Edgar Ramírez-Mondragón
+"""
 
 from __future__ import annotations
 

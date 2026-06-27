@@ -1,4 +1,7 @@
-"""Shortcut tap class."""
+"""Shortcut tap class.
+
+Copyright (c) 2025 Edgar Ramírez-Mondragón
+"""
 
 from __future__ import annotations
 
