@@ -687,28 +687,33 @@
           "description": "The description of the Group.",
           "type": "string"
         },
-        "member_ids": {
-          "description": "The Member ids to add to this Group.",
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "uniqueItems": true
+        "card_aging_mode": {
+          "description": "The card aging mode for stories in this Group: \"gradual\" (fixed fade steps at 1, 2, and 4 weeks), \"immediate\", or \"off\" (explicitly disabled for this Group). Set to null to inherit the Workspace default.",
+          "type": "string",
+          "enum": [
+            "off",
+            "gradual",
+            "immediate"
+          ],
+          "x-nullable": true
         },
-        "workflow_ids": {
-          "description": "The Workflow ids to add to the Group.",
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "name": {
-          "maxLength": 63,
+        "color": {
+          "pattern": "^#[a-fA-F0-9]{6}$",
+          "format": "css-color",
+          "description": "The color you wish to use for the Group in the system.",
           "minLength": 1,
-          "description": "The name of this Group.",
           "type": "string"
+        },
+        "card_aging_threshold_days": {
+          "description": "The number of days an in-progress Story can go without activity before it is considered stale. Required when card_aging_mode is \"immediate\"; not allowed otherwise.",
+          "type": "integer",
+          "format": "int64",
+          "x-nullable": true
+        },
+        "display_icon_id": {
+          "description": "The Icon id for the avatar of this Group.",
+          "type": "string",
+          "format": "uuid"
         },
         "mention_name": {
           "maxLength": 63,
@@ -716,11 +721,10 @@
           "description": "The mention name of this Group.",
           "type": "string"
         },
-        "color": {
-          "pattern": "^#[a-fA-F0-9]{6}$",
-          "format": "css-color",
-          "description": "The color you wish to use for the Group in the system.",
+        "name": {
+          "maxLength": 63,
           "minLength": 1,
+          "description": "The name of this Group.",
           "type": "string"
         },
         "color_key": {
@@ -745,16 +749,28 @@
             "turquoise"
           ]
         },
-        "display_icon_id": {
-          "description": "The Icon id for the avatar of this Group.",
-          "type": "string",
-          "format": "uuid"
+        "member_ids": {
+          "description": "The Member ids to add to this Group.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "uniqueItems": true
+        },
+        "workflow_ids": {
+          "description": "The Workflow ids to add to the Group.",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
         }
       },
       "additionalProperties": false,
       "required": [
-        "name",
-        "mention_name"
+        "mention_name",
+        "name"
       ]
     },
     "CreateIteration": {
@@ -1004,6 +1020,30 @@
       "additionalProperties": false,
       "required": [
         "name"
+      ]
+    },
+    "CreateObjectiveHealth": {
+      "x-doc-skip": true,
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "The health status of the Objective.",
+          "type": "string",
+          "enum": [
+            "At Risk",
+            "On Track",
+            "Off Track",
+            "No Health"
+          ]
+        },
+        "text": {
+          "description": "The description of the Health status.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "status"
       ]
     },
     "CreateOrDeleteStoryReaction": {
@@ -2340,6 +2380,36 @@
         "archived"
       ]
     },
+    "DocSearchResults": {
+      "description": "The results of the Document search query.",
+      "x-doc-skip": true,
+      "type": "object",
+      "properties": {
+        "total": {
+          "description": "The total number of matches for the search query. The first 1000 matches can be paged through via the API.",
+          "type": "integer",
+          "format": "int64"
+        },
+        "data": {
+          "description": "A list of document search results.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DocSlim"
+          }
+        },
+        "next": {
+          "description": "The URL path and query string for the next page of search results.",
+          "type": "string",
+          "x-nullable": true
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "total",
+        "data",
+        "next"
+      ]
+    },
     "DocSlim": {
       "x-doc-skip": true,
       "type": "object",
@@ -3611,12 +3681,28 @@
           "description": "A string description of this resource.",
           "type": "string"
         },
+        "card_aging_mode": {
+          "description": "The card aging mode for stories in this Group: \"gradual\" or \"immediate\". Null if card aging is off.",
+          "type": "string",
+          "enum": [
+            "off",
+            "gradual",
+            "immediate"
+          ],
+          "x-nullable": true
+        },
         "color": {
           "description": "The hex color to be displayed with the Group (for example, \"#ff0000\").",
           "pattern": "^#[a-fA-F0-9]{6}$",
           "format": "css-color",
           "minLength": 1,
           "type": "string",
+          "x-nullable": true
+        },
+        "card_aging_threshold_days": {
+          "description": "The number of days an in-progress Story can go without activity before it is considered stale.",
+          "type": "integer",
+          "format": "int64",
           "x-nullable": true
         },
         "num_stories_started": {
@@ -3724,7 +3810,9 @@
         "description",
         "archived",
         "entity_type",
+        "card_aging_mode",
         "color",
+        "card_aging_threshold_days",
         "num_stories_started",
         "mention_name",
         "name",
@@ -9890,6 +9978,7 @@
       "type": "object",
       "properties": {
         "name": {
+          "maxLength": 128,
           "minLength": 1,
           "description": "The new name of the Category.",
           "type": "string"
@@ -9983,6 +10072,24 @@
         "color_key": {
           "description": "A color key associated with this EnumValue within the CustomField's domain.",
           "type": "string",
+          "enum": [
+            "blue",
+            "purple",
+            "midnight-blue",
+            "orange",
+            "yellow-green",
+            "brass",
+            "gray",
+            "fuchsia",
+            "yellow",
+            "pink",
+            "sky-blue",
+            "green",
+            "red",
+            "black",
+            "slate",
+            "turquoise"
+          ],
           "x-nullable": true
         },
         "enabled": {
@@ -10215,12 +10322,28 @@
           "type": "boolean",
           "x-nullable": true
         },
+        "card_aging_mode": {
+          "description": "The card aging mode for stories in this Group: \"gradual\" (fixed fade steps at 1, 2, and 4 weeks), \"immediate\", or \"off\" (explicitly disabled for this Group). Set to null to inherit the Workspace default.",
+          "type": "string",
+          "enum": [
+            "off",
+            "gradual",
+            "immediate"
+          ],
+          "x-nullable": true
+        },
         "color": {
           "description": "The color you wish to use for the Group in the system.",
           "pattern": "^#[a-fA-F0-9]{6}$",
           "format": "css-color",
           "minLength": 1,
           "type": "string",
+          "x-nullable": true
+        },
+        "card_aging_threshold_days": {
+          "description": "The number of days an in-progress Story can go without activity before it is considered stale. Required when card_aging_mode is \"immediate\"; not allowed otherwise.",
+          "type": "integer",
+          "format": "int64",
           "x-nullable": true
         },
         "display_icon_id": {
@@ -11994,10 +12117,7 @@
             "description": "Resource does not exist"
           },
           "422": {
-            "description": "**Either:** (1) Unprocessable **or** (2)  ",
-            "schema": {
-              "$ref": "#/definitions/UnprocessableError"
-            }
+            "description": "Unprocessable"
           }
         },
         "operationId": "getDoc",
@@ -12044,14 +12164,11 @@
             "description": "Resource does not exist"
           },
           "422": {
-            "description": "**Either:** (1) Unprocessable **or** (2)  ",
-            "schema": {
-              "$ref": "#/definitions/UnprocessableError"
-            }
+            "description": "Unprocessable"
           }
         },
         "operationId": "updateDoc",
-        "description": "Updates an existing Doc's title and/or content. Supports markdown or HTML input via content_format parameter. Rejects updates if document has an active CKEditor session.",
+        "description": "Updates an existing Doc's title and/or content. Supports markdown or HTML input via content_format parameter. When a document is updated: (1) For Tiptap-migrated docs, SSE events notify connected Tiptap clients to refresh. (2) For non-migrated docs, CKEditor cache is flushed and SSE events notify connected CKEditor users.",
         "summary": "Update Doc"
       },
       "delete": {
@@ -12091,15 +12208,146 @@
             "description": "Resource does not exist"
           },
           "422": {
+            "description": "Unprocessable"
+          }
+        },
+        "operationId": "deleteDoc",
+        "description": "Permanently deletes a Doc and its associated data. Requires admin access to the doc. When a document is deleted, connected clients will be notified via SSE events.",
+        "summary": "Delete Doc"
+      }
+    },
+    "/api/v3/documents/{doc-public-id}/epics": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "doc-public-id",
+            "description": "The public ID of the Document.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/EpicSlim"
+              }
+            },
+            "description": "Resource"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "403": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DisabledFeatureError"
+            }
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "Unprocessable"
+          }
+        },
+        "operationId": "listDocumentEpics",
+        "description": "Get a list of all Epics related to this Document.",
+        "summary": "List Document Epics"
+      }
+    },
+    "/api/v3/documents/{doc-public-id}/epics/{epic-public-id}": {
+      "put": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "doc-public-id",
+            "description": "The public ID of the Document.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "path",
+            "name": "epic-public-id",
+            "description": "The public ID of the Epic.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "403": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DisabledFeatureError"
+            }
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
             "description": "**Either:** (1) Unprocessable **or** (2)  ",
             "schema": {
               "$ref": "#/definitions/UnprocessableError"
             }
           }
         },
-        "operationId": "deleteDoc",
-        "description": "Permanently deletes a Doc and its associated data. Requires admin access to the doc. Rejects deletion if document has an active CKEditor session.",
-        "summary": "Delete Doc"
+        "operationId": "linkDocumentToEpic",
+        "description": "Create a relationship between a Document and an Epic.",
+        "summary": "Link Document to Epic"
+      },
+      "delete": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "doc-public-id",
+            "description": "The public ID of the Document.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "path",
+            "name": "epic-public-id",
+            "description": "The public ID of the Epic.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "403": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DisabledFeatureError"
+            }
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "Unprocessable"
+          }
+        },
+        "operationId": "unlinkDocumentFromEpic",
+        "description": "Remove a relationship between a Document and an Epic.",
+        "summary": "Unlink Document from Epic"
       }
     },
     "/api/v3/entity-templates": {
@@ -12808,6 +13056,43 @@
         "summary": "Delete Epic Comment"
       }
     },
+    "/api/v3/epics/{epic-public-id}/documents": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "epic-public-id",
+            "description": "The unique ID of the Epic.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DocSlim"
+              }
+            },
+            "description": "Resource"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "Unprocessable"
+          }
+        },
+        "operationId": "listEpicDocuments",
+        "description": "Get a list of all Documents related to this Epic.",
+        "summary": "List Epic Documents"
+      }
+    },
     "/api/v3/epics/{epic-public-id}/health": {
       "get": {
         "parameters": [
@@ -12962,37 +13247,6 @@
         "operationId": "listEpicStories",
         "description": "Get a list of all Stories in an Epic.",
         "summary": "List Epic Stories"
-      }
-    },
-    "/api/v3/epics/{epic-public-id}/unlink-productboard": {
-      "post": {
-        "parameters": [
-          {
-            "in": "path",
-            "name": "epic-public-id",
-            "description": "The unique ID of the Epic.",
-            "required": true,
-            "type": "integer",
-            "format": "int64"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "400": {
-            "description": "Schema mismatch"
-          },
-          "404": {
-            "description": "Resource does not exist"
-          },
-          "422": {
-            "description": "Unprocessable"
-          }
-        },
-        "operationId": "unlinkProductboardFromEpic",
-        "description": "This endpoint allows you to unlink a productboard epic.",
-        "summary": "Unlink Productboard from Epic"
       }
     },
     "/api/v3/external-link/stories": {
@@ -14441,6 +14695,7 @@
           }
         },
         "operationId": "listMilestones",
+        "deprecated": true,
         "description": "(Deprecated: Use 'List Objectives') List Milestones returns a list of all Milestones and their attributes.",
         "summary": "List Milestones"
       },
@@ -14480,6 +14735,7 @@
           }
         },
         "operationId": "createMilestone",
+        "deprecated": true,
         "description": "(Deprecated: Use 'Create Objective') Create Milestone allows you to create a new Milestone in Shortcut.",
         "summary": "Create Milestone"
       }
@@ -14514,6 +14770,7 @@
           }
         },
         "operationId": "getMilestone",
+        "deprecated": true,
         "description": "(Deprecated: Use 'Get Objective') Get Milestone returns information about a chosen Milestone.",
         "summary": "Get Milestone"
       },
@@ -14555,6 +14812,7 @@
           }
         },
         "operationId": "updateMilestone",
+        "deprecated": true,
         "description": "(Deprecated: Use 'Update Objective') Update Milestone can be used to update Milestone properties.",
         "summary": "Update Milestone"
       },
@@ -14584,6 +14842,7 @@
           }
         },
         "operationId": "deleteMilestone",
+        "deprecated": true,
         "description": "(Deprecated: Use 'Delete Objective') Delete Milestone can be used to delete any Milestone.",
         "summary": "Delete Milestone"
       }
@@ -14621,6 +14880,7 @@
           }
         },
         "operationId": "listMilestoneEpics",
+        "deprecated": true,
         "description": "(Deprecated: Use 'List Objective Epics') List all of the Epics within the Milestone.",
         "summary": "List Milestone Epics"
       }
@@ -14830,6 +15090,118 @@
         "operationId": "listObjectiveEpics",
         "description": "List all of the Epics within the Objective.",
         "summary": "List Objective Epics"
+      }
+    },
+    "/api/v3/objectives/{objective-public-id}/health": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "objective-public-id",
+            "description": "The unique ID of the Objective.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Health"
+            },
+            "description": "Resource"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "Unprocessable"
+          }
+        },
+        "operationId": "getObjectiveHealth",
+        "description": "Get the current health for the specified Objective.",
+        "summary": "Get Objective Health"
+      },
+      "post": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "objective-public-id",
+            "description": "The unique ID of the Objective.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "CreateObjectiveHealth",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateObjectiveHealth"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "schema": {
+              "$ref": "#/definitions/Health"
+            },
+            "description": "Resource"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "Unprocessable"
+          }
+        },
+        "operationId": "createObjectiveHealth",
+        "description": "Create a new health status for the specified Objective.",
+        "summary": "Create Objective Health"
+      }
+    },
+    "/api/v3/objectives/{objective-public-id}/health-history": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "objective-public-id",
+            "description": "The unique ID of the Objective.",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Health"
+              }
+            },
+            "description": "Resource"
+          },
+          "400": {
+            "description": "Schema mismatch"
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "Unprocessable"
+          }
+        },
+        "operationId": "listObjectiveHealths",
+        "description": "List the history of health statuses for the specified Objective, most recent first.",
+        "summary": "List Objective Healths"
       }
     },
     "/api/v3/projects": {
@@ -15180,6 +15552,85 @@
         "operationId": "search",
         "description": "Search lets you search Epics and Stories based on desired parameters. Since ordering of the results can change over time (due to search ranking decay, new Epics and Stories being created), the `next` value from the previous response can be used as the path and query string for the next page to ensure stable ordering.",
         "summary": "Search"
+      }
+    },
+    "/api/v3/search/documents": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "title",
+            "description": "Search text to match against document titles. Supports fuzzy matching. Required.",
+            "required": true,
+            "minLength": 1,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "archived",
+            "description": "When true, find archived documents. When false, find non-archived documents.",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "created_by_me",
+            "description": "When true, find documents created by the current user. When false, find documents NOT created by current user.",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "followed_by_me",
+            "description": "When true, find documents that the current user is following. When false, find documents NOT followed.",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "description": "The number of search results to include in a page. Minimum of 1 and maximum of 250.",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "next",
+            "description": "The next page token.",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/DocSearchResults"
+            },
+            "description": "Resource"
+          },
+          "400": {
+            "description": "**Either:** (1) Schema mismatch **or** (2) Maximum of 1000 search results exceeded ",
+            "schema": {
+              "$ref": "#/definitions/MaxSearchResultsExceededError"
+            }
+          },
+          "403": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DisabledFeatureError"
+            }
+          },
+          "404": {
+            "description": "Resource does not exist"
+          },
+          "422": {
+            "description": "Unprocessable"
+          }
+        },
+        "operationId": "searchDocuments",
+        "description": "Search Documents lets you search Documents based on desired parameters.\n                          Supports structured filters: title, archived, created_by_me, followed_by_me.",
+        "summary": "Search Documents"
       }
     },
     "/api/v3/search/epics": {

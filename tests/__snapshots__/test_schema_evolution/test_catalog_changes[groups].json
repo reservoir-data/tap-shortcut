@@ -42,7 +42,25 @@
     {
       "breadcrumb": [
         "properties",
+        "card_aging_mode"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
         "color"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "card_aging_threshold_days"
       ],
       "metadata": {
         "inclusion": "available"
@@ -263,6 +281,27 @@
         "description": "Whether or not the Group is archived.",
         "type": "boolean"
       },
+      "card_aging_mode": {
+        "description": "The card aging mode for stories in this Group: \"gradual\" or \"immediate\". Null if card aging is off.",
+        "enum": [
+          "off",
+          "gradual",
+          "immediate",
+          null
+        ],
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "card_aging_threshold_days": {
+        "description": "The number of days an in-progress Story can go without activity before it is considered stale.",
+        "format": "int64",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
       "color": {
         "description": "The hex color to be displayed with the Group (for example, \"#ff0000\").",
         "format": "css-color",
@@ -425,7 +464,9 @@
       "description",
       "archived",
       "entity_type",
+      "card_aging_mode",
       "color",
+      "card_aging_threshold_days",
       "num_stories_started",
       "mention_name",
       "name",
