@@ -81,20 +81,19 @@ select = [
   "ALL",
 ]
 ignore = [
-  "COM812", # missing-trailing-comma
-  "DJ",     # flake8-django
-  "ISC001", # single-line-implicit-string-concatenation
+  "missing-trailing-comma",
+  "single-line-implicit-string-concatenation",
 ]
 per-file-ignores."noxfile.py" = [
   "ANN",
 ]
 per-file-ignores."tests/*" = [
-  "ANN201", # missing-return-type-public-function
-  "S101",   # assert
-  "SLF001", # private-member-access
+  "missing-return-type-undocumented-public-function",
+  "assert",
+  "private-member-access",
 ]
 unfixable = [
-  "ERA001", # commented-out-code
+  "commented-out-code",
 ]
 pydocstyle.convention = "google"
 
