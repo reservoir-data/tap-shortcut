@@ -418,7 +418,7 @@
       "mention_name": {
         "description": "The mention name of the Group.",
         "minLength": 1,
-        "pattern": "^[a-z0-9\\-\\_\\.]+$",
+        "pattern": "^[a-z0-9._-]+$",
         "type": "string"
       },
       "name": {

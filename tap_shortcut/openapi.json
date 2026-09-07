@@ -427,7 +427,7 @@
           "type": "string"
         },
         "content_format": {
-          "description": "Format of the content being sent. Defaults to 'html'. If 'markdown', content will be converted to HTML for storage. Storage is always HTML; this parameter just tells us what format you're sending.",
+          "description": "Default content_format: html. Format of the content being sent. If 'markdown', content will be converted to HTML for storage. Storage is always HTML; this parameter just tells us what format you're sending.",
           "type": "string",
           "enum": [
             "markdown",
@@ -3651,7 +3651,7 @@
       "type": "object",
       "properties": {
         "content_format": {
-          "description": "Format of the content to return. Defaults to 'markdown'. If 'html', includes HTML content in response.",
+          "description": "Default content_format: markdown. Format of the content to return. If 'html', includes HTML content in response.",
           "type": "string",
           "enum": [
             "markdown",
@@ -3711,7 +3711,7 @@
           "format": "int64"
         },
         "mention_name": {
-          "pattern": "^[a-z0-9\\-\\_\\.]+$",
+          "pattern": "^[a-z0-9._-]+$",
           "minLength": 1,
           "description": "The mention name of the Group.",
           "type": "string"
@@ -10114,7 +10114,7 @@
           "type": "string"
         },
         "content_format": {
-          "description": "Format of content. For input: specifies format of provided content (defaults to 'html'). For output: controls response format - 'markdown' (default) or 'html' to include HTML content.",
+          "description": "Default content_format: html. Format of content. For input: specifies format of provided content (defaults to 'html'). For output: controls response format - 'markdown' (default) or 'html' to include HTML content. Because output defaults to markdown, set 'markdown' when editing and writing back content you read from GET.",
           "type": "string",
           "enum": [
             "markdown",
@@ -10302,7 +10302,7 @@
           "format": "uuid"
         },
         "external_id": {
-          "maxLength": 128,
+          "maxLength": 2048,
           "description": "An additional ID that you may wish to assign to the file.",
           "type": "string"
         }
@@ -12070,7 +12070,7 @@
           }
         },
         "operationId": "createDoc",
-        "description": "Creates a new Doc. Supports markdown or HTML input via content_format parameter.",
+        "description": "Creates a new Doc. Supports markdown or HTML input via content_format parameter. WARNING: if content_format is not supplied, `content` input defaults to html.",
         "summary": "Create Doc"
       }
     },
@@ -12088,7 +12088,7 @@
           {
             "in": "query",
             "name": "content_format",
-            "description": "Format of the content to return. Defaults to 'markdown'. If 'html', includes HTML content in response.",
+            "description": "Default content_format: markdown. Format of the content to return. If 'html', includes HTML content in response.",
             "required": false,
             "type": "string",
             "enum": [
@@ -12168,7 +12168,7 @@
           }
         },
         "operationId": "updateDoc",
-        "description": "Updates an existing Doc's title and/or content. Supports markdown or HTML input via content_format parameter. When a document is updated: (1) For Tiptap-migrated docs, SSE events notify connected Tiptap clients to refresh. (2) For non-migrated docs, CKEditor cache is flushed and SSE events notify connected CKEditor users.",
+        "description": "Updates an existing Doc's title and/or content. Supports markdown or HTML input via content_format parameter. WARNING: if content_format is not supplied, `content` input defaults to html. When a document is updated: (1) For Tiptap-migrated docs, SSE events notify connected Tiptap clients to refresh. (2) For non-migrated docs, CKEditor cache is flushed and SSE events notify connected CKEditor users.",
         "summary": "Update Doc"
       },
       "delete": {
