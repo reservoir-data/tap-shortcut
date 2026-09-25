@@ -7234,6 +7234,11 @@
           "description": "The Member's username within the Organization.",
           "type": "string"
         },
+        "is_mentionable": {
+          "description": "For an Agent: whether it may be @-mentioned in comments and descriptions.",
+          "x-doc-skip": true,
+          "type": "boolean"
+        },
         "name": {
           "description": "The Member's name within the Organization.",
           "type": "string",
@@ -7260,6 +7265,11 @@
         },
         "is_owner": {
           "description": "A boolean indicating whether this profile is an owner at their associated organization.",
+          "type": "boolean"
+        },
+        "is_assignable": {
+          "description": "For an Agent: whether it may be set as an owner on Stories and Epics.",
+          "x-doc-skip": true,
           "type": "boolean"
         },
         "email_address": {
