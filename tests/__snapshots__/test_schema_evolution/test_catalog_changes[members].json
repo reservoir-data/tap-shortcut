@@ -151,6 +151,17 @@
         "properties",
         "profile",
         "properties",
+        "is_mentionable"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
         "name"
       ],
       "metadata": {
@@ -272,6 +283,17 @@
         "profile",
         "properties",
         "is_owner"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
+        "profile",
+        "properties",
+        "is_assignable"
       ],
       "metadata": {
         "inclusion": "available"
@@ -440,6 +462,14 @@
           },
           "is_agent": {
             "description": "Whether this profile is an Agent/Bot user.",
+            "type": "boolean"
+          },
+          "is_assignable": {
+            "description": "For an Agent: whether it may be set as an owner on Stories and Epics.",
+            "type": "boolean"
+          },
+          "is_mentionable": {
+            "description": "For an Agent: whether it may be @-mentioned in comments and descriptions.",
             "type": "boolean"
           },
           "is_owner": {
