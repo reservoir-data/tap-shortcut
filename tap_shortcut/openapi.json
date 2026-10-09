@@ -2142,6 +2142,12 @@
           "x-doc-skip": true,
           "type": "boolean"
         },
+        "creator_id": {
+          "description": "The ID of the Member who created this CustomField, or null when unknown.",
+          "type": "string",
+          "format": "uuid",
+          "x-nullable": true
+        },
         "updated_at": {
           "description": "The instant when this CustomField was last updated.",
           "type": "string",
@@ -2189,6 +2195,7 @@
       "required": [
         "entity_type",
         "name",
+        "creator_id",
         "updated_at",
         "id",
         "field_type",
@@ -3757,6 +3764,12 @@
           "type": "integer",
           "format": "int64"
         },
+        "creator_id": {
+          "description": "The ID of the Member who created this Group, or null when unknown.",
+          "type": "string",
+          "format": "uuid",
+          "x-nullable": true
+        },
         "updated_at": {
           "description": "The last instant when this group was updated.",
           "type": "string",
@@ -3820,6 +3833,7 @@
         "color_key",
         "num_stories",
         "num_epics_started",
+        "creator_id",
         "updated_at",
         "num_stories_backlog",
         "id",
