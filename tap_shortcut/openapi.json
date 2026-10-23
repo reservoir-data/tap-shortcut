@@ -527,6 +527,17 @@
           "type": "string",
           "format": "uuid"
         },
+        "size": {
+          "description": "The t-shirt size of the Epic for high-level effort estimation.",
+          "type": "string",
+          "enum": [
+            "small",
+            "xlarge",
+            "medium",
+            "large"
+          ],
+          "x-nullable": true
+        },
         "epic_state_id": {
           "description": "The ID of the Epic State.",
           "type": "integer",
@@ -2640,6 +2651,11 @@
           "type": "string",
           "format": "uuid"
         },
+        "size": {
+          "description": "The t-shirt size of the Epic for high-level effort estimation.",
+          "type": "string",
+          "x-nullable": true
+        },
         "epic_state_id": {
           "description": "The ID of the Epic State.",
           "type": "integer",
@@ -2775,6 +2791,7 @@
         "state",
         "milestone_id",
         "requested_by_id",
+        "size",
         "epic_state_id",
         "label_ids",
         "started_at_override",
@@ -2987,6 +3004,11 @@
           "type": "string",
           "format": "uuid"
         },
+        "size": {
+          "description": "The t-shirt size of the Epic for high-level effort estimation.",
+          "type": "string",
+          "x-nullable": true
+        },
         "epic_state_id": {
           "description": "The ID of the Epic State.",
           "type": "integer",
@@ -3120,6 +3142,7 @@
         "state",
         "milestone_id",
         "requested_by_id",
+        "size",
         "epic_state_id",
         "label_ids",
         "started_at_override",
@@ -3305,6 +3328,11 @@
           "type": "string",
           "format": "uuid"
         },
+        "size": {
+          "description": "The t-shirt size of the Epic for high-level effort estimation.",
+          "type": "string",
+          "x-nullable": true
+        },
         "epic_state_id": {
           "description": "The ID of the Epic State.",
           "type": "integer",
@@ -3435,6 +3463,7 @@
         "state",
         "milestone_id",
         "requested_by_id",
+        "size",
         "epic_state_id",
         "label_ids",
         "started_at_override",
@@ -10229,6 +10258,17 @@
           "description": "The ID of the member that requested the epic.",
           "type": "string",
           "format": "uuid"
+        },
+        "size": {
+          "description": "The t-shirt size of the Epic for high-level effort estimation.",
+          "type": "string",
+          "enum": [
+            "small",
+            "xlarge",
+            "medium",
+            "large"
+          ],
+          "x-nullable": true
         },
         "epic_state_id": {
           "description": "The ID of the Epic State.",

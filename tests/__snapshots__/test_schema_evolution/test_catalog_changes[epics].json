@@ -222,6 +222,15 @@
     {
       "breadcrumb": [
         "properties",
+        "size"
+      ],
+      "metadata": {
+        "inclusion": "available"
+      }
+    },
+    {
+      "breadcrumb": [
+        "properties",
         "epic_state_id"
       ],
       "metadata": {
@@ -858,6 +867,13 @@
         "format": "uuid",
         "type": "string"
       },
+      "size": {
+        "description": "The t-shirt size of the Epic for high-level effort estimation.",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
       "started": {
         "description": "A true/false boolean indicating if the Epic has been started.",
         "type": "boolean"
@@ -1010,6 +1026,7 @@
       "state",
       "milestone_id",
       "requested_by_id",
+      "size",
       "epic_state_id",
       "label_ids",
       "started_at_override",
